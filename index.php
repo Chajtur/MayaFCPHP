@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://kit.fontawesome.com/55b2ee1815.js" crossorigin="anonymous"></script>
     <script src="../js/index.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>
         Maya FC
     </title>
