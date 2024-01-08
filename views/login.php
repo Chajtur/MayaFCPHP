@@ -1,7 +1,7 @@
 <main class='mx-auto mt-2 w-5/6'>
     <div class='text-yellow-400 rounded p-2'>
         <h2 class='mt-1 text-center text-2xl font-bold leading-9 tracking-tight'>Inicio de Sesión</h2>
-        <p>Ingrese su usuario y contraseña para iniciar sesión</p>
+        <p class="text-center">Ingrese su usuario y contraseña para iniciar sesión</p>
         <div class='mt-1 sm:mx-auto sm:w-full sm:max-w-sm'>
             <form class='w-full' action='#' method='POST'>
                 <div>

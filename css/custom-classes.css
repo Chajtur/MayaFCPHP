@@ -1,0 +1,3 @@
+.navLink {
+    @apply px-3 pb-1 cursor-pointer hover:bg-red-900 hover:text-white hover:rounded hover:p-2
+  }
