@@ -21,7 +21,9 @@ function saveContact() {
     $message = $_POST['message'];
     $phone = $_POST['phone'];
     $contact = new Contact($name, $email, $message, $phone);
-    $contact->save();
+    if ($contact->save()) {
+        
+    }
 }
 
 ?>

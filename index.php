@@ -14,13 +14,44 @@
     <meta charset="utf-8">
     <link rel="icon" href="/assets/LogoMaya.ico">
 </head>
+
 <body class="bg-black">
     <header>
-        <?php include 'components/header.php';?>
+        <?php include 'components/header.php'; ?>
     </header>
     <content class="">
     </content>
     <footer>
-        <?php include 'components/footer.php';?>
+        <?php include 'components/footer.php'; ?>
     </footer>
+    <!-- Modal de espera mientras cargan datos -->
+    <div class="modal fade" id="spinner" tabindex="-1" role="dialog" aria-labelledby="spinnerLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="spinner-border text-info" style="width: 4rem; height:4rem"></div>
+                    <div clas="text-primary">
+                        <p>Por favor espera mientras cargamos tus datos<br><br><small class="fw-bold">MAYA FC</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal para información general -->
+    <div class="modal" tabindex="-1" id="infoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="infoModalText">
+                    <p>Tu sesión ha expirado debido a inactividad, deberás volver a iniciar sesión</p>
+                </div>
+                <div class="modal-footer" id="infoModalButtons">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
