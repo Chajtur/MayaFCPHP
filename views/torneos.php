@@ -24,7 +24,7 @@ for ($i = 1; $i <= 10; $i++) {
     <div class="mt-5 text-2xl">
         Tabla de posiciones
     </div>
-    <div id="torneoTabla" class="mt-2">
+    <div id="torneoTabla" class="mt-2 overflow-x-auto w-full">
         <?php include_once '../components/tabla.php'; ?>
     </div>
 </div>

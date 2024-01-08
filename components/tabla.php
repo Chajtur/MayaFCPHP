@@ -102,7 +102,7 @@ $posiciones = [
 ];
 ?>
 
-<table id="" class="table-auto w-full rounded bg-white">
+<table id="" class="table-auto min-w-full rounded bg-white">
     <thead>
         <tr class="text-yellow-400">
             <th class="border border-gray-400 px-4 py-2">Equipo</th>
