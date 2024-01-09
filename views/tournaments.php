@@ -1,15 +1,7 @@
 <?php
 
-//$torneos = Torneo::getAll();
+$torneos = Tournament::getAll();
 
-$torneos = [];
-
-for ($i = 1; $i <= 10; $i++) {
-    $torneos[] = [
-        'id' => $i,
-        'nombre' => "Torneo $i",
-    ];
-}
 ?>
 
 <div class="text-yellow-400 mx-auto w-5/6 text-center mt-2">
@@ -25,6 +17,6 @@ for ($i = 1; $i <= 10; $i++) {
         Tabla de posiciones
     </div>
     <div id="torneoTabla" class="mt-2 overflow-x-auto w-full">
-        <?php include_once '../components/tabla.php'; ?>
+        <?php include_once '../components/table.php'; ?>
     </div>
 </div>

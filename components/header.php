@@ -6,9 +6,9 @@
         <span class="text-yellow-400 font-bold text-lg p-3 hidden md:flex">MAYA FC</span>
         <ul class="flex flex-col font-bold md:flex-row justify-center items-center">
             <li class="navLink"><a class="bg-red-900 text-white p-2 rounded" data-id="home">Home</a></li>
-            <li class="navLink"><a data-id='torneos'>Torneos</a></li>
-            <li class="navLink"><a data-id="jugadores">Jugadores</a></li>
-            <li class="navLink"><a data-id="tienda">Tienda</a></li>
+            <li class="navLink"><a data-id='tournaments'>Torneos</a></li>
+            <li class="navLink"><a data-id="players">Jugadores</a></li>
+            <li class="navLink"><a data-id="shop">Tienda</a></li>
             <li class="navLink"><a data-id="contact">Contáctanos</a></li>
             <li class="navLink"><a data-id="login">Login</a></li>
         </ul>

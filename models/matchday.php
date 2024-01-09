@@ -2,7 +2,7 @@
 
 include_once 'database.php';
 
-class Jornada
+class MatchDay
 {
     private $id;
     private $idTorneo;

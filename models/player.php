@@ -2,7 +2,7 @@
 
 include_once 'database.php';
 
-class Jugador
+class Player
 {
     private $id;
     private $nombre;
