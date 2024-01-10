@@ -1,8 +1,8 @@
 <?php
 
-include_once 'database.php';
+include_once '../database.php';
 
-class Torneo
+class Tournament
 {
     private $id;
     private $name;
@@ -77,11 +77,17 @@ class Torneo
         }
     }
 
-    public function getTable($idTorneo)
+    public function getStandings($idTorneo)
    {
          try {
             $db = new Database();
-            $db->query("SELECT t.id, t.name as equipo, t.logo, t.colorPrimario, t.colorSecundario, t.short, p.points, p.playedMatches, p.wonMatches, p.drawMatches, p.lostMatches, p.goalsFor, p.goalsAgainst, p.goalsDifference FROM tournaments t INNER JOIN positions p ON t.id = p.tournamentId INNER JOIN teams e ON p.teamId = e.id WHERE t.id = :idTorneo ORDER BY p.points DESC, p.goalsDifference DESC, p.goalsFor DESC, p.goalsAgainst ASC");
+            $db->query("SELECT * FROM standings WHERE idTournament = :idTorneo");
+            $db->bind(':idTorneo', $idTorneo);
+            $db->execute();
+            return $db->resultSet();
+         } catch (PDOException $e) {
+            echo 'Connection Error: ' . $e->getMessage();
+            return false;
          }
    }
 }

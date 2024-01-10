@@ -2,7 +2,7 @@
 
 include_once 'database.php';
 
-class Equipo
+class Team
 {
     private $id;
     private $name;

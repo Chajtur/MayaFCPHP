@@ -1,20 +1,7 @@
 <?php
 
 $idTorneo = $_POST['idTorneo'] ?? 1;
-//$torneo = Torneo::get($idTorneo);
-
-$torneo = [
-    'id' => 1,
-    'nombre' => 'Torneo 1',
-    'fechaInicio' => '2021-01-01',
-    'fechaFin' => '2021-01-31',
-    'fechaInicioInscripcion' => '2020-12-01',
-    'fechaFinInscripcion' => '2020-12-31',
-    'costo' => 100,
-    'numEquipos' => 10,
-    'numJugadoresEquipo' => 11,
-    'numJornadas' => 9,
-];
+$torneo = Tournament::get($idTorneo);
 
 //$posiciones = $torneo->getPosiciones();
 $posiciones = [
@@ -102,26 +89,31 @@ $posiciones = [
 ];
 ?>
 
-<table id="" class="table-auto min-w-full rounded bg-white">
+<table id="" class="table-auto min-w-full rounded-lg bg-white">
     <thead>
         <tr class="text-yellow-400">
-            <th class="border border-gray-400 px-4 py-2">Equipo</th>
-            <th class="border border-gray-400 px-4 py-2">Puntos</th>
-            <th class="border border-gray-400 px-4 py-2">PJ</th>
-            <th class="border border-gray-400 px-4 py-2">PG</th>
-            <th class="border border-gray-400 px-4 py-2">PE</th>
-            <th class="border border-gray-400 px-4 py-2">PP</th>
+            <th class="border border-gray-400 px-2 py-2 hidden md:flex justify-center">Posición</th>
+            <th class="border border-gray-400 px-2 py-2 md:hidden">Pos</th>
+            <th class="border border-gray-400 px-2 py-2">Equipo</th>
+            <th class="justify-center border border-gray-400 px-2 py-2 hidden md:flex">Puntos</th>
+            <th class="border border-gray-400 px-2 py-2 md:hidden">Pts</th>
+            <th class="border border-gray-400 px-2 py-2">PJ</th>
+            <th class="border border-gray-400 px-2 py-2">PG</th>
+            <th class="border border-gray-400 px-2 py-2">PE</th>
+            <th class="border border-gray-400 px-2 py-2">PP</th>
         </tr>
     </thead>
     <tbody class="text-red-900">
-        <?php foreach ($posiciones as $posicion) { ?>
+        <?php $i = 1;
+        foreach ($posiciones as $posicion) { ?>
             <tr>
-                <td class="border border-gray-400 px-4 py-2"><?php echo $posicion['equipo']; ?></td>
-                <td class="border border-gray-400 px-4 py-2"><?php echo $posicion['puntos']; ?></td>
-                <td class="border border-gray-400 px-4 py-2"><?php echo $posicion['partidosJugados']; ?></td>
-                <td class="border border-gray-400 px-4 py-2"><?php echo $posicion['partidosGanados']; ?></td>
-                <td class="border border-gray-400 px-4 py-2"><?php echo $posicion['partidosEmpatados']; ?></td>
-                <td class="border border-gray-400 px-4 py-2"><?php echo $posicion['partidosPerdidos']; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $i++; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $posicion['equipo']; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $posicion['puntos']; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $posicion['partidosJugados']; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $posicion['partidosGanados']; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $posicion['partidosEmpatados']; ?></td>
+                <td class="border border-gray-400 px-2 py-2"><?php echo $posicion['partidosPerdidos']; ?></td>
             </tr>
         <?php } ?>
     </tbody>

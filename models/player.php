@@ -1,27 +1,24 @@
 <?php
 
-include_once 'database.php';
+include_once '../database.php';
 
 class Player
 {
     private $id;
-    private $nombre;
-    private $apellido;
-    private $fechaNacimiento;
+    private $firstName;
+    private $lastName;
+    private $dateOfBirth;
     private $email;
-    private $telefono;
-    private $idUsuario;
+    private $phone;
     private $idCarnet;
 
-    public function __construct($id, $nombre, $apellido, $fechaNacimiento, $email, $telefono, $idUsuario, $idCarnet)
+    public function __construct($firstName = null, $lastName = null, $dateOfBirth = null, $email = null, $phone = null, $idCarnet = null)
     {
-        $this->id = $id;
-        $this->nombre = $nombre;
-        $this->apellido = $apellido;
-        $this->fechaNacimiento = $fechaNacimiento;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->dateOfBirth = $dateOfBirth;
         $this->email = $email;
-        $this->telefono = $telefono;
-        $this->idUsuario = $idUsuario;
+        $this->phone = $phone;
         $this->idCarnet = $idCarnet;
     }
 
@@ -29,13 +26,12 @@ class Player
     {
         try {
             $db = new Database();
-            $db->query("INSERT INTO jugadores (nombre, apellido, fechaNacimiento, email, telefono, idEquipo, idUsuario, idCarnet) VALUES (:nombre, :apellido, :fechaNacimiento, :email, :telefono, :idUsuario, :idCarnet)");
-            $db->bind(':nombre', $this->nombre);
-            $db->bind(':apellido', $this->apellido);
-            $db->bind(':fechaNacimiento', $this->fechaNacimiento);
+            $db->query("INSERT INTO players (firstName, lastName, dateOfBirth, email, phone, idCarnet) VALUES (:firstName, :lastName, :dateOfBirth, :email, :phone, :idCarnet)");
+            $db->bind(':firstName', $this->firstName);
+            $db->bind(':lastName', $this->lastName);
+            $db->bind(':dateOfBirth', $this->dateOfBirth);
             $db->bind(':email', $this->email);
-            $db->bind(':telefono', $this->telefono);
-            $db->bind(':idUsuario', $this->idUsuario);
+            $db->bind(':phone', $this->phone);
             $db->bind(':idCarnet', $this->idCarnet);
             $db->execute();
             return true;
