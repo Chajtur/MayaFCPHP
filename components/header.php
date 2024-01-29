@@ -8,6 +8,7 @@
             <li class="navLink"><a class="bg-red-900 text-white p-2 rounded" data-id="home">Home</a></li>
             <li class="navLink"><a data-id='tournaments'>Torneos</a></li>
             <li class="navLink"><a data-id="players">Jugadores</a></li>
+            <li class="navLink"><a data-id="news">Noticias</a></li>
             <li class="navLink"><a data-id="shop">Tienda</a></li>
             <li class="navLink"><a data-id="contact">Contáctanos</a></li>
             <li class="navLink"><a data-id="login">Login</a></li>

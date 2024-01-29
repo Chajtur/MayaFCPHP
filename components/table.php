@@ -85,13 +85,53 @@ $posiciones = [
         'partidosEmpatados' => 0,
         'partidosPerdidos' => 5,
     ],
+    [
+        'equipo' => 'Equipo 11',
+        'puntos' => 3,
+        'partidosJugados' => 5,
+        'partidosGanados' => 1,
+        'partidosEmpatados' => 0,
+        'partidosPerdidos' => 4,
+    ],
+    [
+        'equipo' => 'Equipo 12',
+        'puntos' => 2,
+        'partidosJugados' => 5,
+        'partidosGanados' => 0,
+        'partidosEmpatados' => 2,
+        'partidosPerdidos' => 3,
+    ],
+    [
+        'equipo' => 'Equipo 13',
+        'puntos' => 1,
+        'partidosJugados' => 5,
+        'partidosGanados' => 0,
+        'partidosEmpatados' => 1,
+        'partidosPerdidos' => 4,
+    ],
+    [
+        'equipo' => 'Equipo 14',
+        'puntos' => 0,
+        'partidosJugados' => 5,
+        'partidosGanados' => 0,
+        'partidosEmpatados' => 0,
+        'partidosPerdidos' => 5,
+    ],
+    [
+        'equipo' => 'Equipo 15',
+        'puntos' => 0,
+        'partidosJugados' => 5,
+        'partidosGanados' => 0,
+        'partidosEmpatados' => 0,
+        'partidosPerdidos' => 5,
+    ],
     // Add more posiciones as needed
 ];
 ?>
 
 <table id="" class="table-auto min-w-full rounded-lg bg-white">
     <thead>
-        <tr class="text-yellow-400">
+        <tr class="text-yellow-400 bg-gray-500">
             <th class="border border-gray-400 px-2 py-2 hidden md:flex justify-center">Posición</th>
             <th class="border border-gray-400 px-2 py-2 md:hidden">Pos</th>
             <th class="border border-gray-400 px-2 py-2">Equipo</th>

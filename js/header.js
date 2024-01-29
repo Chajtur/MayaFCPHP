@@ -18,6 +18,14 @@ function hideModal() {
     $('#spinner').addClass('hidden');
 }
 
+function showInfoModal() {
+    $('#infoModal').modal('show');
+}
+
+function hideInfoModal() {
+    $('#infoModal').modal('hide');
+}
+
 $(document).ready(function() {
     showModal();
     $('content').load('../views/home.php', function() {
