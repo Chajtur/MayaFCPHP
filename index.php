@@ -27,7 +27,7 @@
         <?php include 'components/footer.php'; ?>
     </footer>
 
-    /** Modal de espera mientras carga información */
+    <!-- Modal de espera mientras carga información -->
     <div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true" id="spinner">
         <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
@@ -58,7 +58,7 @@
         </div>
     </div>
 
-    /** Modal para desplegar información al usuario */
+    <!-- Modal para desplegar información al usuario -->
     <div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true" id="infoModal">
         <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>

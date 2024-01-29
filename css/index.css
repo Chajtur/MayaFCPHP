@@ -590,6 +590,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -880,6 +884,10 @@ video {
 
 .text-right {
   text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-start {
@@ -1261,5 +1269,9 @@ video {
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:w-4\/5 {
+    width: 80%;
   }
 }

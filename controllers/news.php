@@ -2,7 +2,14 @@
 
 include_once '../models/news.php';
 
-$action = $_POST['action'] ?: 'index';
+if (isset($_POST['action'])) {
+    $action = $_POST['action'];
+} else if (isset($_GET['action'])) {
+    $action = $_GET['action'];
+} else {
+    $action = 'index';
+}
+
 if ($action == 'indexComponent') {
     $new = new NewsController;
     $new->indexComponent();
